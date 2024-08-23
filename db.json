@@ -1,0 +1,168 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "cpf": "123.456.789-00",
+      "email": "john.doe@example.com",
+      "dtAdmission": "2023-01-15",
+      "address": "123 Elm Street, Springfield, IL",
+      "weight": "75",
+      "height": "180",
+      "hoursMeditated": "5",
+      "benefits": [
+        {
+          "id": "b2",
+          "name": "Plano de saúde Pampulha Intermédica",
+          "company": "Tio Patinhas Bank",
+          "image": "https://media.istockphoto.com/id/1869998947/pt/foto/senior-medical-check-up.jpg?s=1024x1024&w=is&k=20&c=3hfpNtitIx3P13N9ktaiZgb_mMFwSExQp0sSoeQVd2g="
+        },
+        {
+          "id": "b1",
+          "name": "Plano de saúde NorteEuropa",
+          "company": "Acme Co",
+          "image": "https://media.istockphoto.com/id/1988844230/pt/foto/paediatric-medical-check-up.jpg?s=1024x1024&w=is&k=20&c=411Ae19XhzBWuYR90AD6KfSZzgN7hePCrPDcYWmbq60="
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "cpf": "098.765.432-11",
+      "email": "jane.smith@example.com",
+      "dtAdmission": "2023-03-22",
+      "address": "456 Oak Avenue, Springfield, IL",
+      "weight": "65",
+      "height": "170",
+      "hoursMeditated": "8",
+      "benefits": [
+        {
+          "id": "b3",
+          "name": "Plano Dental Sorriso",
+          "company": "Acme Co",
+          "image": "https://media.istockphoto.com/id/2156066696/pt/foto/dentist-and-patient-at-modern-medical-center-doctor-treats-a-young-woman-teeth-in-hospital.jpg?s=1024x1024&w=is&k=20&c=b0vpHZd17_7ixKyXoGLA6DRBjs0vUNUgttsVk6gS-yk="
+        },
+        {
+          "id": "b2",
+          "name": "Plano de saúde Pampulha Intermédica",
+          "company": "Tio Patinhas Bank",
+          "image": "https://media.istockphoto.com/id/1869998947/pt/foto/senior-medical-check-up.jpg?s=1024x1024&w=is&k=20&c=3hfpNtitIx3P13N9ktaiZgb_mMFwSExQp0sSoeQVd2g="
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Emily Johnson",
+      "cpf": "112.233.445-56",
+      "email": "emily.johnson@example.com",
+      "dtAdmission": "2022-11-10",
+      "address": "789 Pine Road, Springfield, IL",
+      "weight": "68",
+      "height": "165",
+      "hoursMeditated": "6",
+      "benefits": [
+        {
+          "id": "b3",
+          "name": "Plano Dental Sorriso",
+          "company": "Acme Co",
+          "image": "https://media.istockphoto.com/id/2156066696/pt/foto/dentist-and-patient-at-modern-medical-center-doctor-treats-a-young-woman-teeth-in-hospital.jpg?s=1024x1024&w=is&k=20&c=b0vpHZd17_7ixKyXoGLA6DRBjs0vUNUgttsVk6gS-yk="
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Michael Brown",
+      "cpf": "554.433.221-10",
+      "email": "michael.brown@example.com",
+      "dtAdmission": "2024-02-01",
+      "address": "101 Maple Lane, Springfield, IL",
+      "weight": "85",
+      "height": "190",
+      "hoursMeditated": "3",
+      "benefits": [
+        {
+          "id": "b4",
+          "name": "Plano de saúde Mental Mente Sã, Corpo São",
+          "company": "Tio Patinhas Bank",
+          "image": "https://media.istockphoto.com/id/2041424114/pt/foto/woman-holding-a-rainbow-umbrella.jpg?s=1024x1024&w=is&k=20&c=6Img3CPP-3077HGTHF44QyhYfRkn6N2fC3mv7QvGk0M="
+        }
+      ]
+    },
+    {
+      "id": "c7f3",
+      "name": "Felipe",
+      "cpf": "12345678900",
+      "email": "email@email",
+      "dtAdmission": "2020-02-01",
+      "address": "frfr",
+      "weight": 5,
+      "height": 45,
+      "hoursMeditated": 0,
+      "benefits": []
+    },
+    {
+      "id": "7a68",
+      "name": "João teste",
+      "cpf": "123.456.789-99",
+      "email": "email@email.com",
+      "dtAdmission": "2015-02-02",
+      "address": "sasasa",
+      "weight": 7,
+      "height": 7,
+      "hoursMeditated": 7,
+      "benefits": [
+        {
+          "id": "b4",
+          "name": "Plano de saúde Mental Mente Sã, Corpo São",
+          "company": "Tio Patinhas Bank",
+          "image": "https://media.istockphoto.com/id/2041424114/pt/foto/woman-holding-a-rainbow-umbrella.jpg?s=1024x1024&w=is&k=20&c=6Img3CPP-3077HGTHF44QyhYfRkn6N2fC3mv7QvGk0M="
+        }
+      ]
+    },
+    {
+      "id": "76cc",
+      "name": "Alicia",
+      "cpf": "124.558.685-55",
+      "email": "nti@email.com",
+      "dtAdmission": "2012-10-06",
+      "address": "rua",
+      "weight": 5,
+      "height": 5,
+      "hoursMeditated": 4,
+      "benefits": [
+        {
+          "id": "b2",
+          "name": "Plano de saúde Pampulha Intermédica",
+          "company": "Tio Patinhas Bank",
+          "image": "https://media.istockphoto.com/id/1869998947/pt/foto/senior-medical-check-up.jpg?s=1024x1024&w=is&k=20&c=3hfpNtitIx3P13N9ktaiZgb_mMFwSExQp0sSoeQVd2g="
+        }
+      ]
+    }
+  ],
+  "benefits": [
+    {
+      "id": "b1",
+      "name": "Plano de saúde NorteEuropa",
+      "company": "Acme Co",
+      "image": "https://media.istockphoto.com/id/1988844230/pt/foto/paediatric-medical-check-up.jpg?s=1024x1024&w=is&k=20&c=411Ae19XhzBWuYR90AD6KfSZzgN7hePCrPDcYWmbq60="
+    },
+    {
+      "id": "b2",
+      "name": "Plano de saúde Pampulha Intermédica",
+      "company": "Tio Patinhas Bank",
+      "image": "https://media.istockphoto.com/id/1869998947/pt/foto/senior-medical-check-up.jpg?s=1024x1024&w=is&k=20&c=3hfpNtitIx3P13N9ktaiZgb_mMFwSExQp0sSoeQVd2g="
+    },
+    {
+      "id": "b3",
+      "name": "Plano Dental Sorriso",
+      "company": "Acme Co",
+      "image": "https://media.istockphoto.com/id/2156066696/pt/foto/dentist-and-patient-at-modern-medical-center-doctor-treats-a-young-woman-teeth-in-hospital.jpg?s=1024x1024&w=is&k=20&c=b0vpHZd17_7ixKyXoGLA6DRBjs0vUNUgttsVk6gS-yk="
+    },
+    {
+      "id": "b4",
+      "name": "Plano de saúde Mental Mente Sã, Corpo São",
+      "company": "Tio Patinhas Bank",
+      "image": "https://media.istockphoto.com/id/2041424114/pt/foto/woman-holding-a-rainbow-umbrella.jpg?s=1024x1024&w=is&k=20&c=6Img3CPP-3077HGTHF44QyhYfRkn6N2fC3mv7QvGk0M="
+    }
+  ]
+}
