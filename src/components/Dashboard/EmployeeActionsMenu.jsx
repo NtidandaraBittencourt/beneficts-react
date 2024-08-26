@@ -25,10 +25,31 @@ const EmployeeActionsMenu = ({
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleMenuClose}
+        hover
       >
-        <MenuItem onClick={() => handleOptionClick('Edit')}>Editar</MenuItem>
-        <MenuItem onClick={() => handleOptionClick('Delete')}>Excluir</MenuItem>
-        <MenuItem onClick={handleEditBenefits}>Adicionar benefício</MenuItem>
+        <MenuItem 
+          onClick={() => handleOptionClick('Edit')}
+          sx={{
+            '&:hover': { cursor: 'pointer', backgroundColor:  '#f0f0f0' }
+          }}> 
+          Editar funcionário
+        </MenuItem>
+        <MenuItem
+          onClick={handleEditBenefits}
+          sx={{
+            '&:hover': { cursor: 'pointer', backgroundColor:  '#f0f0f0' }
+          }}
+        >
+            Editar benefício
+        </MenuItem>
+        <MenuItem
+          onClick={() => handleOptionClick('Delete')}
+          sx={{
+            '&:hover': { cursor: 'pointer', backgroundColor:  '#f0f0f0' }
+          }}
+        >
+          Excluir
+        </MenuItem>
       </Menu>
     </>
   );

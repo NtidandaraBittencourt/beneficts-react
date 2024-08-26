@@ -15,12 +15,6 @@ export const fetchEmployees = async (search, page = 1, rowsPerPage = 5) => {
     },
   });
   return response.data;
-};
-
-export const getSearchEmployees = async (queryKey) => {
-  const [_, searchCpf] = queryKey;
-  const response = await api.get(`/employees?name=${searchCpf}`);
-  return response.data;
-};
+}
 
 export default api;

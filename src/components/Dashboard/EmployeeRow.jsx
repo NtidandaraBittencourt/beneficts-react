@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQueryClient } from '@tanstack/react-query';
 import { TableRow, TableCell, IconButton, Collapse, Box, Chip } from '@mui/material';
@@ -8,8 +8,10 @@ import EmployeeDetails from './EmployeeDetails';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import EmployeeActionsMenu from './EmployeeActionsMenu';
 import api from '../../services/api';
+import MessageAlert from '../Generics/MessageAlert';
 
 const EmployeeRow = ({ employee, index, openCollapse, setOpenCollapse, setOpenModal, setEmployeeId }) => {
+  const [message, setMessage] = useState({ msg: '', status: 'success' });
   const [anchorEl, setAnchorEl] = useState(null);
   const queryClient = useQueryClient();
   const navigate = useNavigate();
@@ -28,6 +30,7 @@ const EmployeeRow = ({ employee, index, openCollapse, setOpenCollapse, setOpenMo
       navigate(`/edit-employee/${employee.id}`);
     } else if (option === 'Delete') {
       await api.delete(`/employees/${employee.id}`);
+      setMessage({ msg: "Funcionário excluído com sucesso!", status: 'success' });
       queryClient.invalidateQueries(['employees']);
     }
   };
@@ -37,6 +40,16 @@ const EmployeeRow = ({ employee, index, openCollapse, setOpenCollapse, setOpenMo
     setOpenModal(true);
     handleMenuClose();
   };
+
+  useEffect(() => {
+    if (message.msg) {
+      const timer = setTimeout(() => {
+        setMessage({ msg: '', status: '' });
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
 
   return (
     <>
@@ -89,6 +102,7 @@ const EmployeeRow = ({ employee, index, openCollapse, setOpenCollapse, setOpenMo
           </Collapse>
         </TableCell>
       </TableRow>
+      {message.msg && <MessageAlert className="mt-4" message={message} />}
     </>
   );
 };

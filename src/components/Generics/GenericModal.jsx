@@ -12,9 +12,6 @@ const GenericModal = ({ open, onClose, title, content, actions, onSave }) => {
         <Button onClick={onClose} color="primary">
           Fechar
         </Button>
-        <Button onClick={onSave} color="primary" variant="contained">
-          Salvar
-        </Button>
         {actions}
       </DialogActions>
     </Dialog>

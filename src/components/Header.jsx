@@ -8,10 +8,13 @@ const Header = () => {
     <Drawer
       variant="permanent"
       anchor="left"
-      className="w-64 border-r-0 text-gray-700 font-bold rounded-2xl "
+      className="w-64 "
       sx={{
         '& .MuiDrawer-paper': {
           backgroundColor: '#ffdae3',
+          borderRight: 'none',
+          borderTopRightRadius: '20px',
+          borderBottomRightRadius: '20px',
         },
       }}
       

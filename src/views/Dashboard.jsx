@@ -8,11 +8,13 @@ import GenericModal from '../components/Generics/GenericModal';
 import BenefitSelection from '../components/BenefitSelection';
 import { CircularProgress, Paper, Button, Typography, TablePagination } from '@mui/material';
 import MessageAlert from '../components/Generics/MessageAlert';
+import api from '../services/api'
 
 const Dashboard = () => {
   const [search, setSearch] = useState('');
   const [openModal, setOpenModal] = useState(false);
   const [employeeId, setEmployeeId] = useState(null);
+  const [selectedBenefits, setSelectedBenefits] = useState([]);
   const [message, setMessage] = useState({ msg: '', status: 'success' });
   const [openCollapse, setOpenCollapse] = useState(false);
   const [searchData, setSearchData] = useState(null);
@@ -45,16 +47,24 @@ const Dashboard = () => {
     setOpenModal(false);
   };
 
-  const handleSaveBenefits = () => {
-    setMessage({ msg: "Funcionário cadastrado com seus benefícios com sucesso!!", status: 'success' });
-    refetch();
-    handleCloseModal();
+  const handleSaveBenefits = async () => {
+    const employee = data.find(emp => emp.id === employeeId);
+
+    try {
+      await api.put(`/employees/${employeeId}`, {...employee, benefits: selectedBenefits });
+      setMessage({ msg: "Funcionário cadastrado com seus benefícios com sucesso!!", status: 'success' });
+      refetch();
+      handleCloseModal();
+      navigate('/');
+    } catch (error) {
+      setMessage({ msg: "Erro ao atualizar os benefícios", status: 'error' });
+      console.error('Erro ao atualizar os benefícios:', error);
+    }
   };
 
   useEffect(() => {
     if (message.msg) {
       const timer = setTimeout(() => {
-        navigate('/');
         setMessage({ msg: '', status: '' });
       }, 3000);
 
@@ -113,14 +123,13 @@ const Dashboard = () => {
         labelDisplayedRows={() => ''}
       />
 
-
-      <MessageAlert message={message}/>
+      <MessageAlert message={message} />
 
       <GenericModal
         open={openModal}
         onClose={handleCloseModal}
         title="Selecione os benefícios"
-        content={<BenefitSelection employeeId={employeeId} onSave={handleSaveBenefits} />}
+        content={<BenefitSelection employeeId={employeeId} onSelectionChange={setSelectedBenefits} />}
         actions={
           <Button onClick={handleSaveBenefits} color="primary" variant="contained">
             Salvar Benefícios
